@@ -1,0 +1,121 @@
+#Scene-1 {
+    background-image: url("./images/Autumn/Scene\ 1\ BG.jpg");
+    background-size: cover;
+}
+
+#Scene-1-Tree {
+    width: 58%;
+    position: absolute;
+    padding: 0; margin: 0;
+    right: -14.5%;
+    top: 22%;
+}
+
+.zoom-in-tree {
+    transform: scale(6) translate(-25%, 7%);
+}
+
+#Bird-1, #Bird-2, #Bird-3, #Bird-4 {
+    width: 5%;
+    position: absolute;
+}
+#Bird-1 {
+    left: 15%;
+    top: 15%;
+}
+
+#Bird-2 {
+    left: 18%;
+    top: 19%;
+}
+
+#Bird-3 {
+    left: 19.5%;
+    top: 16.5%;
+}
+
+#Bird-4 {
+    left: 13.5%;
+    top: 18%;
+}
+
+.scene-1-bird-flying-animation {
+    animation: birdFlying 20s ease-in-out 0s infinite;
+}
+
+@keyframes birdFlying {
+    0% {
+
+        transform: translate(-500%, -200%) scale(1);
+    }
+    100% {
+        transform: translate(800%, 500%) scale(0.3);
+    }
+}
+
+#Scene-1-Leaf {
+    width: 7.3242%;
+}
+
+#Scene-1 > .leaf-initial-position {
+    position: absolute;
+    rotate: -90deg;
+    transform-origin: bottom;
+    right: 26%;
+    top: 36%;
+    scale: 0.3
+}
+
+@keyframes windSwinging {
+    0%, 50%, 100% {
+        transform: rotate(0deg);
+    }
+     
+    25% {
+        transform: rotate(calc(-1 * var(--leaf-rotation-distance)));
+    }
+
+    75% {
+        transform: rotate(calc(-1 * var(--leaf-rotation-distance)));
+    }
+}
+
+.swinging {
+    animation: windSwinging 1s ease-in-out 1s infinite;
+}
+
+#Scene-1 > .leaf-blowing-away-animation {
+    animation: 
+        leafBlownAway1X 10s cubic-bezier(.69,1.35,.28,-0.43) 0s 1,
+        leafBlownAway1Y 10s cubic-bezier(.07,.57,.55,-0.81) 0s 1,
+        leafBlownAway1Scale 10s linear 0s 1;
+}
+
+@keyframes leafBlownAway1X {
+    to {
+        right: 94%;
+    }
+}
+
+@keyframes leafBlownAway1Y {
+    to {
+        top: 60%;
+    }
+}
+
+@keyframes leafBlownAway1Scale {
+    to {
+        transform: rotate(100deg);
+    }
+} 
+
+#Scene-1 > .leaf-scene-end-position {
+    position: absolute;
+    rotate: 100deg;
+    right: 94%;
+    top: 60%;
+    scale: 0.3;
+}
+
+
+/*End of Scene 1*/

@@ -1,0 +1,83 @@
+/*Scene 1-5*/
+
+#Scene-1-5 {
+    background-image: 
+        url("./images/Autumn/Scene-1-5-Scroller\ Scaled.jpg");
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-position: 0 top;
+}
+
+.scene-1-5-side-scrolling {
+    animation: sideScroller 40s linear 0s infinite;    
+}
+
+@keyframes sideScroller {
+    to {
+        background-position: 4096px top;
+    }
+}
+
+#Scene-1-5-Rock {
+    width: 25%;
+    position: absolute;
+    left: 17.5%;
+    bottom: 5.5%;
+
+    animation: rockSideScroller 6.5s linear 0s infinite;
+}
+
+@keyframes rockSideScroller {
+    from {
+        left: -30%
+    }
+    to {
+        left: 100%;
+    }
+}
+
+#Scene-1-5-Leaf {
+    width: 7.3242%;
+    position: absolute;
+}
+
+#Scene-1-5 > .leaf-initial-position {
+    transform: rotate(-120deg);
+    right: 1%;
+    top: 20%;
+}
+
+#Scene-1-5 > .leaf-blowing-away-animation {
+    animation: 
+        leafBlownAwayX 10s cubic-bezier(.53,1.6,.39,-0.59) 0s 1,
+        leafBlownAwayY 10s cubic-bezier(.52,1.51,0,-0.2) 0s 1,
+        leafBlownAwayScale 10s linear 0s 1;
+}
+
+@keyframes leafBlownAwayX {
+    to {
+        right: 84%;
+    }
+}
+
+@keyframes leafBlownAwayY {
+    80% {
+        top: 78%
+    }
+    100% {
+        top: 78%;
+    }
+}
+
+@keyframes leafBlownAwayScale {
+    to {
+        transform: rotate(100deg);
+    }
+}
+
+#Scene-1-5 > .leaf-scene-end-position {
+    right: 84%;
+    top: 78%;
+}
+
+/*End of Scene 1-5*/

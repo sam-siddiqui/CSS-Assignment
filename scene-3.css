@@ -1,0 +1,165 @@
+/*Scene 3*/
+
+#Scene-3 {
+    background-image: url("./images/Spring/Scene\ 3\ BG\ -\ new\ edited.jpg");
+    background-size: cover;
+}
+
+#Scene-3-Bird {
+    width: 8%;
+    position: absolute;
+    top: 4.5%;
+    right: 30%;
+}
+
+#Scene-3-Bird {
+    animation:
+        birdCirclingAnimationX 20s linear 0s infinite,
+        birdCirclingAnimationY 20s linear 0s infinite,
+        birdCirclingFlipAnimation 20s ease-in-out 0s infinite
+}
+
+@keyframes birdCirclingAnimationX {
+    5% {
+        right: calc(0.3461 * var(--bg-height-width))
+    }
+    10% {
+        right: calc(0.411 * var(--bg-height-width))
+    }
+    20% {
+        right: calc(0.3536 * var(--bg-height-width));
+    }
+    40% {
+        right: calc(0.3036 * var(--bg-height-width));
+    }
+    
+    60% {
+        right: calc(0.1985 * var(--bg-height-width));
+    }
+
+    70% {
+        right: calc(0.15 * var(--bg-height-width));
+    }
+
+    80% {
+        right: calc(0.255 * var(--bg-height-width));
+    }
+
+    100% {
+        right: calc(0.3212 * var(--bg-height-width))
+    }
+}
+
+@keyframes birdCirclingAnimationY {
+    10%{
+        top: calc(0.045 * var(--bg-height-width));
+    }
+    25%{
+        top: calc(0.047 * var(--bg-height-width));
+    }
+    50% {
+        top: calc(0.053 * var(--bg-height-width));
+    }
+    75%{
+        top: calc(0.0469 * var(--bg-height-width));
+    }
+    100% {
+        top: calc(0.0432 * var(--bg-height-width));
+    }
+}
+
+@keyframes birdCirclingFlipAnimation {
+    0% {
+        transform: scale(0.5, -0.5)
+    }
+    25% {
+        /* rotate: 180deg; */
+        transform: scale(-1, -1)
+    }
+    50% {
+        /* rotate: 180deg; */
+        transform: scale(-1, -1)
+    }
+    75% {
+        /* rotate: 360deg; */
+        transform: scale(0.5, -0.5)
+    }
+    100% {
+        /* rotate: 360deg; */
+        transform: scale(0.5, -0.5)
+    }
+}
+
+#Scene-3-Smoke {
+    width: 30%;
+    position: absolute;
+    left: 15%;
+
+    transition: transform 5s ease;
+    animation: scene-3-smoke 5s ease-in-out 0s infinite;
+}
+
+@keyframes scene-3-smoke {
+    to {
+        transform: translate(0,-1%);
+        opacity: 50%;
+    }
+}
+
+#Scene-3-Clouds {
+    width: 50%;
+    position: absolute;
+    left: -5%;
+    opacity: 0.7;
+
+    animation: scene-3-clouds 30s linear 0s infinite;
+}
+
+@keyframes scene-3-clouds {
+    to {
+        left: 70%
+    }
+}
+
+#Scene-3-Leaf {
+    width: 7.3242%;
+    position: absolute;
+
+    transition: content 5s ease;
+}
+
+#Scene-3 > .leaf-initial-position {
+    position: absolute;
+    transform: scale(0.8, 0.3) rotate(135deg);
+    right:57%;
+    top:67%;
+}
+
+#Scene-3 > .leaf-floating-animation {
+    animation: leafFloatingAnimation3 10s linear 0s 1;
+}
+
+@keyframes leafFloatingAnimation3 {
+    10% {
+        right: 50%;
+        top: 70%;
+    }
+    25% {
+        right: 53%;
+        top: 72%
+    }
+    50% {
+        right: 57%;
+        top: 77%
+    }
+    75% {
+        right: 65%;
+        top: 85%
+    }
+    100% {
+        right: 55%;
+        top: 95%
+    }
+}
+
+/*End of Scene 3*/

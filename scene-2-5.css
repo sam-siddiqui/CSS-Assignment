@@ -1,0 +1,129 @@
+/*Scene 2-5*/
+
+#Scene-2-5 {
+    background-image: url("./images/Winter/Winter\ Landscape\ with\ Log\ Cabin\ 2.jpg");
+    background-size: cover;
+}
+
+#Scene-2-5-Leaf {
+    width: 7.3242%;
+    position: absolute;
+}
+
+#Scene-2-5 > .leaf-initial-position {
+    transform: rotate(120deg);
+    opacity: 60%;
+    scale: 0.2;
+    right: 18%;
+    top: 46%;
+}
+
+#Scene-2-5 > .leaf-floating-animation {
+    animation: leafFloating2-5Animation 10s ease 1s 1;
+}
+
+@keyframes leafFloating2-5Animation {
+    5% {
+        transform: scale(1, 0.8) rotate(120deg);
+        opacity: 65%;
+        right: 15%;
+        top: 47%;
+    }
+    10% {
+        transform: scale(1, 0.8) rotate(235deg);
+        opacity: 65%;
+        right: 15%;
+        top: 49%;
+    }
+    20% {
+        transform: scale(1, 0.8) rotate(235deg);
+        opacity: 70%;
+        right:36%;
+        top:56%;
+    }
+    30% {
+        transform: scale(1.5, 0.8) rotate(235deg);
+        opacity: 85%;
+        right:25%;
+        top:60%;
+    }
+    40% {
+        transform:scale(1.5, 0.8) rotate(235deg);
+        opacity: 80%;
+        right:30%;
+        top:65%;
+    }
+    50% {
+        transform: scale(2, 0.8) rotate(90deg);
+        opacity: 85%; 
+        right:40%;
+        top:70%;
+    }
+    60% {
+        transform: scale(2, 0.8) rotate(180deg);
+        opacity: 85%;
+        right:60%;
+        top:72.5%;
+    }
+    70% {
+        transform: scale(2.5, 0.8) rotate(180deg);
+        opacity: 85%;
+        right:65%;
+        top:73%;
+    }
+    90% {
+        transform: scale(3, 0.8) rotate(235deg);
+        opacity: 0.9;
+        right:67%;
+        top:74%;
+    }
+    100% {
+        transform: scale(3, 0.8) rotate(235deg);
+        opacity: 0.9;
+        right:68%;
+        top:75%;
+    }
+}
+
+.leaf-frozen {
+    content: url("./images/Autumn\ Leaf\ Frozen\ 2.png");
+    filter: brightness(150%) blur(3px);
+}
+
+#Scene-2-5 > .leaf-scene-end-position {
+    transform: scale(1, 0.3) rotate(235deg);
+    opacity: 0.9;
+    right:68%;
+    top:75%;
+    filter: brightness(110%) blur(1px);
+}
+
+#Scene-2-5-Smoke {
+    width: 26%;
+    position: absolute;
+    right: 77%;
+    top: -2%;
+}
+
+.smoke-fading-animation {
+    animation: scene2-5-smokeFading 3s ease 0s infinite;
+}
+
+@keyframes scene2-5-smokeFading {
+    20% {
+        opacity: 80%;
+    }
+    40% {
+        opacity: 60%;
+    }
+    60% {
+        opacity: 40%;
+    }
+    80% {
+        opacity: 60%;
+    }
+    100% {
+        opacity: 80%
+    }
+}
+/*End of Scene 2-5*/

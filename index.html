@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.min.css">
+    <link rel="stylesheet" href="common.css">
+    <title>Journey of a Leaf</title>
+</head>
+
+<body>
+    <!-- Main section containing all animation scenes -->
+    <section>
+        <!-- Container for all animation elements -->
+        <div class="animation-area">
+            <div id="Intro" class="background">
+                Journey of a Leaf
+                <button id="Start" type="button">
+                    Start
+                </button>
+            </div>
+
+            <!-- Scene 1 elements -->
+            <div id="Scene-1" class="background" style="display: none;">
+                <!-- Tree image -->
+                <img class="clickable" src="./images/Scene 1 Tree - Bordered.png" 
+                    id="Scene-1-Tree" role="button" aria-label="Click tree to start animation">
+                <!-- Bird images for flying animation -->
+                <img src="./images/Scene 1 Bird.png" class="scene-1-bird-flying-animation" id="Bird-1" alt="Bird">
+                <img src="./images/Scene 1 Bird.png" class="scene-1-bird-flying-animation" id="Bird-2" alt="Bird">
+                <img src="./images/Scene 1 Bird.png" class="scene-1-bird-flying-animation" id="Bird-3" alt="Bird">
+                <img src="./images/Scene 1 Bird.png" class="scene-1-bird-flying-animation" id="Bird-4" alt="Bird">
+
+                <!-- Leaf image with initial position and swinging animation -->
+                <img class="leaf-initial-position swinging hidden" src="./images/Spring Leaf.png" alt="Autumn Leaf" 
+                    id="Scene-1-Leaf" role="button" aria-label="Click leaf to proceed to next scene">
+            </div>
+
+            <!-- Scene 1-5 elements -->
+            <div id="Scene-1-5" class="background scene-1-5-side-scrolling" style="display: none;">
+                <img src="./images/Scene-1-5-Rock.png" alt="Side Scrolling Rock" id="Scene-1-5-Rock">
+                
+                <!-- Leaf image with initial position and blowing animation -->
+                <img src="./images/Spring Leaf.png" alt="Autumn Leaf" class="leaf-initial-position leaf-blowing-away-animation"
+                    id="Scene-1-5-Leaf">
+                
+            </div>
+
+            <!-- Scene 2 elements -->
+            <div id="Scene-2" class="background" style="display: none;">
+                <img class="smoke-fading-animation" src="./images/Scene 2 Smoke.png" id="Scene-2-Smoke" alt="Smoke from Cabin">
+
+                    <!-- Leaf image with initial position and floating animation -->
+                <img class="clickable leaf-initial-position leaf-floating-animation" src="./images/Spring Leaf.png"
+                    alt="Autumn Leaf" id="Scene-2-Leaf">
+            </div>
+
+            <!-- Scene 2-5 elements -->
+            <div id="Scene-2-5" class="background" style="display: none;">
+                <img class="smoke-fading-animation" src="./images/Scene 2-5 Smoke.png" id="Scene-2-5-Smoke" alt="Smoke from Cabin">
+
+                    <!-- Leaf image with initial position and floating animation -->
+                <img class="clickable leaf-initial-position leaf-floating-animation" src="./images/Spring Leaf.png"
+                    alt="Autumn Leaf" id="Scene-2-5-Leaf">
+            </div>
+
+            <!-- Scene 3 elements -->
+            <div id="Scene-3" class="background" style="display: none;">
+                <!-- Bird, Cloud and Smoke images for background activity -->
+                <img src="./images/Scene 3 - Bird.png" id="Scene-3-Bird" alt="Bird">
+                <img src="./images/Scene 3 Clouds.png" id="Scene-3-Clouds" alt="Clouds">
+                <img src="./images/Scene-3-Smoke.png" id="Scene-3-Smoke" alt="Smoke from Cabin">
+
+                <!-- Leaf image with initial position and floating animation -->
+                <img class="leaf-frozen leaf-initial-position leaf-floating-animation" src="./images/Spring Leaf.png"
+                    alt="Autumn Leaf" id="Scene-3-Leaf">
+            </div>
+
+            <!-- Scene 3-5 elements -->
+            <div id="Scene-3-5" class="background" style="display: none;">
+                <!-- Leaf image with initial position and floating animation -->
+                <img class="clickable leaf-initial-position leaf-floating-animation" src="./images/Spring Leaf.png"
+                    alt="Autumn Leaf" id="Scene-3-5-Leaf">
+            </div>
+        
+            <!-- Scene 4 elements -->
+            <div id="Scene-4" class="background" style="display: none;">
+                <!-- Waterfall, Sunlight, Flower images for background activity -->
+                <img src="./images/Scene-4-Waterfall.png" id="Scene-4-Waterfall" alt="Waterfall-flickering">
+                <img src="./images/Scene-4-Sunlight.png" id="Scene-4-Sunlight" alt="Sunlight-flickering">
+                <img src="./images/Scene-4-Flower.png" id="Scene-4-Flower" alt="Flower-swinging">
+
+                <!-- Leaf image with initial position and blowing animation -->
+                <img src="./images/Crinkly Leaf.png" class="leaf-initial-position leaf-blowing-away-animation"
+                    id="Scene-4-Leaf" alt="Dry Crinkly Leaf">
+            </div>
+
+            <!-- Scene 4-5 elements -->
+            <div id="Scene-4-5" class="background" style="display: none;">
+                <!-- Leaf image with initial position and blowing animation -->
+                <img src="./images/Crinkly Leaf.png" alt="Dry Crinkly Leaf" class="leaf-initial-position leaf-blowing-away-animation"
+                    id="Scene-4-5-Leaf">
+            </div>
+
+            <!-- Scene 5 elements -->
+            <div id="Scene-5" class="background" style="display: none;">
+                <!-- Leaf image with initial position and blowing animation -->
+                <img src="./images/Crinkly Leaf.png" alt="Dry Crinkly Leaf" class="leaf-initial-position leaf-blowing-away-animation"
+                    id="Scene-5-Leaf">
+            </div>
+
+            <!-- Scene 5-5 elements -->
+            <div id="Scene-5-5" class="background" style="display: none;">
+                <!-- Tree Sprout, Tree Growing GIF and Final frame of GIF to represent Tree growth -->
+                <img src="./images/Tree-Sprout.png" alt="Tree Sprout" id="Scene-5-5-Sprout" role="button" aria-label="Click to proceed to the final scene">
+                <img src="./images/Tree Growing Transparent.gif" style="display:none;" id="Scene-5-5-Tree-GIF" alt="Tree growing GIF">
+                <img src="./images/Scene-5-5-Tree.png" class="hidden" id="Scene-5-5-Tree" alt="Last frame of GIF: Fully grown Tree">
+
+                <!-- Leaf image with blowing animation -->
+                <img class="clickable leaf-initial-position leaf-blowing-away-animation" src="./images/Crinkly Leaf.png"
+                    alt="Dry Crinkly Leaf" id="Scene-5-5-Leaf">
+            </div>
+
+            <!-- Scene 6 elements -->
+            <div id="Scene-6" class="background initial-final-scene" style="display: none;">
+                <!-- New leaf shown on the tree, with swinging animation -->
+                <img src="./images/Scene-6-Leaf.png" id="Scene-6-Leaf-2" class="hidden swinging" alt="Green leaf on tree">
+
+                <!-- Leaf image with final position -->
+                <img src="./images/Crinkly Leaf.png" alt="Dry Crinkly Leaf" class="leaf-initial-position fade-in" id="Scene-6-Leaf">
+            </div>
+
+            <div id="Fin" class="background" style="display: none;">
+                Fin...
+            </div>
+        </div>
+    </section>
+    <script src="script.min.js"></script>
+</body>
+
+</html>

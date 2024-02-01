@@ -1,0 +1,92 @@
+:root {
+    --bg-size: 100%;
+    --leaf-rotation-distance: 3deg;
+    --scene-1-bird-speed: 25%;
+    --bg-height-width: 61.75vw;
+}
+
+html {
+    background-color: darkgray;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+section {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animation-area {
+    border: 0.5em groove gray;
+    width: fit-content;
+    height: fit-content;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-clip: content-box;
+    overflow: hidden;
+}
+
+.clickable {
+    z-index: 6;
+}
+
+.hidden {
+    opacity: 0;
+    z-index: 2;
+}
+
+.fade-in {
+    opacity: 100%;
+    transition: opacity 2s ease;
+}
+
+.background {
+    position: relative;
+    max-height: 1024px;
+    max-width: 1024px;
+    height: var(--bg-height-width);
+    width: var(--bg-height-width);
+    z-index: 1;
+
+    transition: transform 5s ease;
+}
+
+#Intro {
+    background-color: rgb(129, 10, 10);
+    background-size: cover;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 5em;
+}
+
+#Start {
+    display: block;
+    font-size: large;
+    color: hsl(190deg, 10%, 95%);
+    background: hsl(190deg, 30%, 15%);
+    border-radius: 10px;
+    padding: 1% 5%;
+    margin-top: 5vw;
+}
+
+#Fin {
+    background: url("./images/Fin.jpg");
+    background-blend-mode:screen;
+    background-size: cover;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: column;
+    font-size: 5em;
+}

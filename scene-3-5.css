@@ -1,0 +1,69 @@
+/*Scene 3-5*/
+
+#Scene-3-5 {
+    background-image: url("./images/Spring/Spring\ Pond\ Scene\ 1\ edited.jpg");
+    background-size: cover;
+}
+
+#Scene-3-5-Leaf {
+    width: 7.3242%;
+    position: absolute;
+}
+
+#Scene-3-5 > .leaf-initial-position {
+    right: 52%;
+    top: 27.5%;
+    transform: scale(0.5, 0.2)
+}
+
+#Scene-3-5 > .leaf-floating-animation {
+    animation: 
+        leafFloating3-5AnimationX 20s ease 0s 1,
+        leafFloating3-5AnimationY 20s cubic-bezier(.1,.88,1,0) 0s 1,
+        leafFloating3-5AnimationScale 20s cubic-bezier(.17,.67,1,-0.26) 0s 1;
+}
+
+@keyframes leafFloating3-5AnimationX {
+    to {
+        right: calc(0.502 * var(--bg-height-width));
+    }
+}
+
+@keyframes leafFloating3-5AnimationY {
+    50% {
+        top: calc(0.5668 * var(--bg-height-width));
+    }
+    90% {
+        top: calc(0.6477 * var(--bg-height-width));
+    }
+    100% {
+        top: calc(0.7935 * var(--bg-height-width));
+    }
+}
+
+@keyframes leafFloating3-5AnimationScale {
+    50% {
+        transform: scale(0.5, 0.2)
+    }
+    80% {
+        transform: scale(0.5, 0.5);
+        opacity: 0.8;
+    }
+    80% {
+        transform: scale(1, 0.1);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(2, 0.5);
+        opacity: 1;
+    }
+}
+
+#Scene-3-5 > .leaf-scene-end-position {
+    right: 50.2%;
+    top: 79.35%;
+    transform: scale(2, 0.5);
+    filter: saturate(120%);
+}
+
+/*End of Scene 3-5*/
